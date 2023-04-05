@@ -1,11 +1,10 @@
-public class Car {
-    public String modelName;
-    public int wheelsCount;
+public class Car extends Transport implements WithEngine {
 
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+    public Car(String modelName, int wheelCount) {
+        super(modelName, wheelCount);
     }
 
+    @Override
     public void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
